@@ -1,86 +1,166 @@
 [
   {
+    "id": 1,
     "name": "Phoenix",
     "role": "Duelist",
     "health": 100,
+    "image_url": "phoenix.jpg",
     "abilities": [
       {
-        "name": "Smokescreen",
-        "effect": "Blocks vision for a short time",
-        "cooldown": 30
+        "name": "Blaze",
+        "effect": "Creates a wall of fire that blocks vision and heals Phoenix when standing inside it",
+        "cooldown": 30,
+        "description": "Phoenix creates a wall of fire that blocks vision and heals him if he stands inside it."
       },
       {
-        "name": "Flashbang",
-        "effect": "Blinds enemies in a small radius",
-        "cooldown": 45
+        "name": "Curveball",
+        "effect": "Throws a flashbang around a corner to blind enemies",
+        "cooldown": 45,
+        "description": "Phoenix throws a flashbang that curves around corners, blinding any enemies in its radius."
+      },
+      {
+        "name": "Hot Hands",
+        "effect": "Heals Phoenix or damages enemies in an area",
+        "cooldown": 40,
+        "description": "Phoenix throws a molotov that heals him if he is in the area, or damages enemies in the area."
+      },
+      {
+        "name": "Run It Back",
+        "effect": "Marks a location and respawns Phoenix there if he dies",
+        "cooldown": 60,
+        "description": "Phoenix marks a spot on the map. If he dies while this ability is active, he respawns at the marked location."
       }
     ]
   },
   {
+    "id": 2,
     "name": "Jett",
     "role": "Duelist",
     "health": 100,
+    "image_url": "jett.jpg",
     "abilities": [
       {
-        "name": "Tailwind",
-        "effect": "Dash in the direction you’re moving",
-        "cooldown": 20
+        "name": "Cloudburst",
+        "effect": "Throws a projectile that bursts into a cloud of smoke",
+        "cooldown": 30,
+        "description": "Jett throws a projectile that bursts into a cloud of smoke, blocking vision."
       },
       {
-        "name": "Cloudburst",
-        "effect": "Creates a smokescreen",
-        "cooldown": 40
+        "name": "Updraft",
+        "effect": "Propels Jett upward",
+        "cooldown": 20,
+        "description": "Jett uses wind to propel herself upward, allowing for vertical mobility."
+      },
+      {
+        "name": "Tailwind",
+        "effect": "After getting a kill, Jett dashes in the direction she's moving",
+        "cooldown": 10,
+        "description": "Jett can dash quickly in the direction she’s moving after getting a kill."
+      },
+      {
+        "name": "Tailwind (Ultimate)",
+        "effect": "Jett dashes quickly in the direction she’s moving",
+        "cooldown": 0,
+        "description": "Jett dashes very fast for a short period, and the ability is reset after getting a kill."
       }
     ]
   },
   {
+    "id": 3,
     "name": "Sage",
-    "role": "Controller",
+    "role": "Sentinel",
     "health": 100,
+    "image_url": "sage.jpg",
     "abilities": [
       {
         "name": "Barrier Orb",
-        "effect": "Creates a solid wall that blocks movement",
-        "cooldown": 30
+        "effect": "Deploys a large wall that can be used to block enemies or protect teammates.",
+        "cooldown": 30,
+        "description": "Sage deploys a large wall that can be rotated and placed in various positions. It blocks enemy movement and vision."
+      },
+      {
+        "name": "Slow Orb",
+        "effect": "Creates a sphere that slows enemies who step inside.",
+        "cooldown": 40,
+        "description": "Sage throws a slow orb that creates an area where enemies' movement is drastically slowed down."
+      },
+      {
+        "name": "Healing Orb",
+        "effect": "Heals teammates or herself over time.",
+        "cooldown": 45,
+        "description": "Sage can heal herself or a teammate by using the Healing Orb, restoring a portion of health over time."
       },
       {
         "name": "Resurrection",
-        "effect": "Revives a fallen teammate",
-        "cooldown": 120
+        "effect": "Revives a dead teammate.",
+        "cooldown": 120,
+        "description": "Sage can bring a dead teammate back to life, restoring them to full health. This ultimate has a long cooldown but can turn the tide of the game."
       }
     ]
   },
   {
+    "id": 4,
     "name": "Reyna",
     "role": "Duelist",
     "health": 100,
+    "image_url": "reyna.jpg",
     "abilities": [
       {
-        "name": "Dismissing",
-        "effect": "Quickly moves a short distance",
-        "cooldown": 20
+        "name": "Leer",
+        "effect": "Throws a sphere that nearsights enemies in its path.",
+        "cooldown": 40,
+        "description": "Reyna throws a blind sphere that nearsights enemies, making them unable to see anything beyond it."
       },
       {
-        "name": "Leer",
-        "effect": "Creates a sphere that nearsighted enemies cannot see through",
-        "cooldown": 40
+        "name": "Dismiss",
+        "effect": "Teleports a short distance.",
+        "cooldown": 30,
+        "description": "Reyna can teleport a short distance in the direction she is moving, allowing her to reposition quickly and dodge enemy fire."
+      },
+      {
+        "name": "Devour",
+        "effect": "Heals herself by consuming a soul orb dropped by a killed enemy.",
+        "cooldown": 0,
+        "description": "After killing an enemy, Reyna can use the soul orb to instantly heal herself or gain movement speed for a short duration."
+      },
+      {
+        "name": "Empress",
+        "effect": "Boosts fire rate and enables automatic use of Devour.",
+        "cooldown": 0,
+        "description": "Reyna enters a state of heightened awareness, increasing her fire rate and allowing her to automatically use Devour without the need to press any buttons."
       }
     ]
   },
   {
+    "id": 5,
     "name": "Omen",
     "role": "Controller",
     "health": 100,
+    "image_url": "omen.jpg",
     "abilities": [
       {
         "name": "Shrouded Step",
-        "effect": "Teleport a short distance",
-        "cooldown": 35
+        "effect": "Teleports a short distance to a nearby location.",
+        "cooldown": 40,
+        "description": "Omen can teleport a short distance to any location in his line of sight. This ability is useful for repositioning or escaping tricky situations."
       },
       {
         "name": "Paranoia",
-        "effect": "Fires a projectile that blinds and deafens enemies in its path",
-        "cooldown": 45
+        "effect": "Sends out a shadowy projectile that blinds and deafens enemies in its path.",
+        "cooldown": 50,
+        "description": "Omen casts a shadowy projectile that travels through walls, blinding and deafening any enemies it touches."
+      },
+      {
+        "name": "Dark Cover",
+        "effect": "Creates a floating orb that can be placed anywhere on the map to block vision.",
+        "cooldown": 30,
+        "description": "Omen deploys a floating orb that can be placed anywhere on the map to block vision. The orb can be controlled and moved while it is in flight."
+      },
+      {
+        "name": "From the Shadows",
+        "effect": "Ultimate ability that allows Omen to teleport anywhere on the map.",
+        "cooldown": 0,
+        "description": "Omen can teleport anywhere on the map, but his position is revealed to the enemies before he arrives. A highly strategic ability for gathering information or setting up surprise attacks."
       }
     ]
   }

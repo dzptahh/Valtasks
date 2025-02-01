@@ -27,14 +27,18 @@ function App() {
   return (
     <div className="App">
       <h1>Valorant Agents</h1>
-
       <h2>Available Agents</h2>
-      <div>
+      <div className="agents-list">
         {agents.length > 0 ? (
           <ul>
             {agents.map((agent) => (
-              <li key={agent.name} onClick={() => handleAgentClick(agent)}>
-                {agent.name}
+              <li key={agent.id} onClick={() => handleAgentClick(agent)}>
+                <img
+                  src={`http://127.0.0.1:8000/static/images/${agent.image_url}`}
+                  alt={agent.name}
+                  className="agent-image"
+                />
+                <p>{agent.name}</p>
               </li>
             ))}
           </ul>
@@ -45,17 +49,20 @@ function App() {
 
       {selectedAgent && (
         <div className="agent-details">
-          <h3>{selectedAgent.name}</h3>
+          <h3 className="agent-name">{selectedAgent.name}</h3>
           <p><strong>Role:</strong> {selectedAgent.role}</p>
           <p><strong>Health:</strong> {selectedAgent.health}</p>
           <h4>Abilities:</h4>
-          <ul>
-            {selectedAgent.abilities.map((ability) => (
-              <li key={ability.name}>
-                <strong>{ability.name}</strong>: {ability.effect} (Cooldown: {ability.cooldown}s)
-              </li>
+          <div className="abilities-list">
+            {selectedAgent.abilities.map((ability, index) => (
+              <div className="ability-card" key={index}>
+                <h5>{ability.name}</h5>
+                <p className="ability-effect">{ability.effect}</p>
+                <p className="ability-description">{ability.description}</p>
+                <p><strong>Cooldown:</strong> {ability.cooldown}s</p>
+              </div>
             ))}
-          </ul>
+          </div>
         </div>
       )}
     </div>

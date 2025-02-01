@@ -1,25 +1,30 @@
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from typing import List
 import json
 from fastapi.middleware.cors import CORSMiddleware
 
-# Define Ability model
+# Initialize FastAPI app first
+app = FastAPI()
+
+# Mount static folder after app initialization
+app.mount("/static", StaticFiles(directory="static"), name="static")
+
+# Define Ability and Agent models
 class Ability(BaseModel):
     name: str
     effect: str
     cooldown: int  # Cooldown in seconds
 
-# Define Agent model
 class Agent(BaseModel):
     name: str
     role: str
     health: int
+    image_url: str  # This will point to a static file
     abilities: List[Ability]
 
-# Initialize FastAPI app
-app = FastAPI()
-
+# Middleware for handling CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allows all origins
@@ -27,6 +32,7 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
     allow_headers=["*"],  # Allows all headers
 )
+
 @app.get("/")
 async def read_root():
     return {"message": "Welcome to the Valorant Agent API! Visit /docs for interactive API documentation."}
@@ -40,7 +46,7 @@ def load_agents_data(file_path: str):
 # Load agents data (assumes the file is in the same directory as the app)
 agents_data = load_agents_data("agents_data.json")
 
-# Define an API endpoint to get all agents or filter by role and ability
+# API to get all agents or filter by role and ability
 @app.get("/agents/", response_model=List[Agent])
 async def get_agents(role: str = None, ability: str = None):
     filtered_agents = agents_data
@@ -53,7 +59,7 @@ async def get_agents(role: str = None, ability: str = None):
 
     return filtered_agents
 
-# Define an API endpoint to get a specific agent by name
+# API to get a specific agent by name
 @app.get("/agents/{agent_name}", response_model=Agent)
 async def get_agent(agent_name: str):
     agent = next((a for a in agents_data if a.name.lower() == agent_name.lower()), None)

@@ -1,80 +1,181 @@
-/* App.css */
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-}
+/* General Styles */
 
 .App {
-  max-width: 800px;
-  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  background-color: #f8f9fa;
   padding: 20px;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh; /* Ensure the app covers the full height */
+  overflow: hidden; /* Prevent overflow */
 }
 
 h1 {
-  font-size: 2.5rem;
-  color: #333;
-  text-align: center;
-}
-
-button {
-  display: block;
-  width: 200px;
-  padding: 10px;
-  margin: 20px auto;
-  font-size: 1.2rem;
-  color: rgb(69, 40, 40);
-  background-color: #4CAF50;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #45a049;
+  font-size: 3rem;
+  color: #343a40;
+  margin-bottom: 20px;
 }
 
 h2 {
-  font-size: 1.5rem;
-  color: #333;
-  text-align: center;
+  font-size: 1.8rem;
+  color: #6c757d;
+  margin-bottom: 20px;
 }
 
-ul {
-  list-style-type: none;
+/* Agent List Styles */
+.agents-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
+
+.agents-list ul {
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-li {
-  font-size: 1.1rem;
-  padding: 8px;
-  background-color: #010000;
-  border-radius: 5px;
+.agents-list li {
+  cursor: pointer;
+  border: 1px solid #dee2e6;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: transform 0.2s;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 250px;
+}
+
+.agents-list li:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.agent-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
   margin-bottom: 10px;
 }
 
-li:hover {
-  background-color: #c65541;
+/* Agent Details Styles */
+.agent-details {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  margin: 20px auto;
+  text-align: left;  /* Align the text to the left */
+  box-sizing: border-box; /* Ensures padding is included in width */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-p {
-  text-align: center;
-  font-size: 1.2rem;
+/* Agent Name */
+.agent-name {
+  font-size: 2rem;
+  color: #343a40;
+  margin-bottom: 10px;
 }
 
-.error {
-  color: red;
-  font-weight: bold;
-  text-align: center;
+/* Abilities List */
+.abilities-list {
+  margin-top: 20px;
 }
 
-.loading {
-  color: #ff8c00;
-  text-align: center;
-  font-size: 1.2rem;
+/* Individual Ability Card */
+.ability-card {
+  background-color: #f1f3f5;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ability-card h5 {
+  font-size: 1.4rem;
+  color: #007bff;
+}
+
+.ability-effect {
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.ability-description {
+  color: #6c757d;
+  margin-bottom: 10px;
+}
+
+.ability-card p {
+  font-size: 1rem;
+  color: #495057;
+}
+
+/* Centering the agent list on mobile */
+@media (max-width: 768px) {
+  .agents-list li {
+    width: 150px; /* Smaller width on mobile */
+  }
+
+  .agent-details {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .agents-list li {
+    width: 120px; /* Even smaller width on very small screens */
+  }
+
+  .agent-details {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Styling for the buttons or interactive elements */
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
