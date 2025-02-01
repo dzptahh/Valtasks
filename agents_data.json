@@ -1,0 +1,87 @@
+[
+  {
+    "name": "Phoenix",
+    "role": "Duelist",
+    "health": 100,
+    "abilities": [
+      {
+        "name": "Smokescreen",
+        "effect": "Blocks vision for a short time",
+        "cooldown": 30
+      },
+      {
+        "name": "Flashbang",
+        "effect": "Blinds enemies in a small radius",
+        "cooldown": 45
+      }
+    ]
+  },
+  {
+    "name": "Jett",
+    "role": "Duelist",
+    "health": 100,
+    "abilities": [
+      {
+        "name": "Tailwind",
+        "effect": "Dash in the direction you’re moving",
+        "cooldown": 20
+      },
+      {
+        "name": "Cloudburst",
+        "effect": "Creates a smokescreen",
+        "cooldown": 40
+      }
+    ]
+  },
+  {
+    "name": "Sage",
+    "role": "Controller",
+    "health": 100,
+    "abilities": [
+      {
+        "name": "Barrier Orb",
+        "effect": "Creates a solid wall that blocks movement",
+        "cooldown": 30
+      },
+      {
+        "name": "Resurrection",
+        "effect": "Revives a fallen teammate",
+        "cooldown": 120
+      }
+    ]
+  },
+  {
+    "name": "Reyna",
+    "role": "Duelist",
+    "health": 100,
+    "abilities": [
+      {
+        "name": "Dismissing",
+        "effect": "Quickly moves a short distance",
+        "cooldown": 20
+      },
+      {
+        "name": "Leer",
+        "effect": "Creates a sphere that nearsighted enemies cannot see through",
+        "cooldown": 40
+      }
+    ]
+  },
+  {
+    "name": "Omen",
+    "role": "Controller",
+    "health": 100,
+    "abilities": [
+      {
+        "name": "Shrouded Step",
+        "effect": "Teleport a short distance",
+        "cooldown": 35
+      },
+      {
+        "name": "Paranoia",
+        "effect": "Fires a projectile that blinds and deafens enemies in its path",
+        "cooldown": 45
+      }
+    ]
+  }
+]

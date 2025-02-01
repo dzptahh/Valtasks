@@ -1,3 +1,4 @@
+from ability import Ability
 class Agent:
     def __init__(self, name, role, health=100):
         self.name = name
