@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List
 import json
+from fastapi.middleware.cors import CORSMiddleware
 
 # Define Ability model
 class Ability(BaseModel):
@@ -19,6 +20,13 @@ class Agent(BaseModel):
 # Initialize FastAPI app
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allows all headers
+)
 @app.get("/")
 async def read_root():
     return {"message": "Welcome to the Valorant Agent API! Visit /docs for interactive API documentation."}

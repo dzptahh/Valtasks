@@ -1,0 +1,80 @@
+/* App.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+}
+
+button {
+  display: block;
+  width: 200px;
+  padding: 10px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  color: rgb(69, 40, 40);
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 1.1rem;
+  padding: 8px;
+  background-color: #010000;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+li:hover {
+  background-color: #c65541;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loading {
+  color: #ff8c00;
+  text-align: center;
+  font-size: 1.2rem;
+}
