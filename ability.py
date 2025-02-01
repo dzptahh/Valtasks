@@ -1,4 +1,3 @@
-from ability import Ability  # Import the Ability class
 
 class Ability:
     def __init__(self, name, description, cooldown) -> None:
