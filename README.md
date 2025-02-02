@@ -1,36 +1,67 @@
-# Valtasks
-### Valorant Agent and Abilities Management System
+# Valorant Agents Info App
 
-This Python project manages **Valorant agents** and their **abilities** using **Object-Oriented Programming (OOP)** principles. It allows you to create agents, assign abilities to them, and view information about both agents and their abilities.
+## 🎯 Overview
+The **Valorant Agents Info App** is a sleek and interactive web application that provides detailed information about Valorant agents, including their roles, abilities, and health stats. Built with a modern UI, it allows users to explore agents dynamically in a **scrollable and seamless** experience.
 
-## Features
+## 🚀 Features
+- **🕵️ Agent List:** Browse through a collection of Valorant agents with their images.
+- **📜 Detailed View:** Click on an agent to see their **abilities, role, and stats**.
+- **🎨 Modern UI:** Responsive and clean design with **smooth scrolling**.
+- **⚡ Fast & Lightweight:** Uses FastAPI for backend and React.js for frontend.
 
-- Create **Agent** objects with attributes like name and role.
-- Add **Abilities** to agents, each with a name, description, and cooldown time.
-- List and display information about agents and their abilities.
-- A simple implementation of OOP concepts such as classes, methods, and attributes.
+## 🛠️ Tech Stack
+### **Frontend**
+- ⚛️ **React.js** – Component-based UI for an interactive experience.
+- 🎨 **CSS** – Styled for a clean, modern look with flexbox and responsive design.
+- ⚡ **Vite** – Fast development server.
 
-## Requirements
+### **Backend**
+- 🐍 **FastAPI** – High-performance backend serving agent data.
+- 📦 **Static Files** – Hosts agent images for seamless integration.
 
-- Python 3.x
-- No external libraries are required.
+## 🎮 How to Run the App
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/yourusername/valorant-agents-app.git
+cd valorant-agents-app
+```
 
-## Installation
+### **2️⃣ Install Dependencies**
+#### **Backend (FastAPI)**
+```bash
+cd backend
+pip install -r requirements.txt
+```
 
-1. Clone this repository to your local machine:
+#### **Frontend (React.js + Vite)**
+```bash
+cd frontend
+npm install
+```
 
-    ```bash
-    git clone https://github.com/dzptahh/Valtasks.git
-    ```
+### **3️⃣ Run the App**
+#### **Start Backend Server**
+```bash
+uvicorn main:app --reload
+```
 
-2. Navigate into the project directory:
+#### **Start Frontend**
+```bash
+npm run dev
+```
 
-    ```bash
-    cd Valtasks
-    ```
+### **4️⃣ Open in Browser**
+Navigate to: [http://localhost:5173](http://localhost:5173)
 
-3. Run the Python script:
+## 📌 API Endpoints
+| Method | Endpoint        | Description           |
+|--------|----------------|-----------------------|
+| GET    | `/agents/`      | Fetch all agents      |
+| GET    | `/agents/{id}`  | Fetch a specific agent |
 
-    ```bash
-    python main.py
-    ```
+
+
+## 🤝 Contribution
+Feel free to contribute by **submitting issues** or **pull requests**. 🚀
+
+
