@@ -42,7 +42,7 @@ npm install
 ### **3️⃣ Run the App**
 #### **Start Backend Server**
 ```bash
-uvicorn main:app --reload
+uvicorn backend:app --reload
 ```
 
 #### **Start Frontend**
